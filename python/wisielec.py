@@ -34,7 +34,7 @@ while True:
     else:
         for index in found_index:
             letter_input[index] = letter
-            print(letter_input)
+        print(letter_input)
 
     if "_" not in letter_input:
         print("Gratulacje, wygrales!")
