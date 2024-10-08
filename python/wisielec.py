@@ -2,26 +2,26 @@
 import sys
 tries = 5
 word = "wisielec"
-list = []
+letter_input = []
 used_letters = []
 
-for l in word: list.append("_")
+for l in word: letter_input.append("_")
 
 def find_index(word,letter): #przypisanie indeksu do wybranej litery
     indexes = []
     
-    for index, letter_in in enumerate(word): #enumerate przypisuje indeks
-        if letter == letter_in:
+    for index, letter_in_word in enumerate(word): #enumerate przypisuje indeks
+        if letter == letter_in_word:
             indexes.append(index)
 
     return indexes
 
 while True:
 
-    letter=input("wybierz litere: ")
+    letter=input("Wybierz litere: ")
     find_index(word, letter)
     used_letters.append(letter)
-    print("uzyte litery: ",used_letters)
+    print("Uzyte litery: ",used_letters)
    
 
     found_index = find_index(word, letter) 
@@ -34,11 +34,11 @@ while True:
             sys.exit(0)
     else:
         for index in found_index:
-            list[index] = letter
-            print(list)
+            letter_input[index] = letter
+            print(letter_input)
 
-    if "_" not in list:
-        print("gratulacje, wygrales")
+    if "_" not in letter_input:
+        print("Gratulacje, wygrales!")
         sys.exit(0)   
     
 
