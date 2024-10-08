@@ -1,4 +1,3 @@
-
 import sys
 tries = 5
 word = "wisielec"
